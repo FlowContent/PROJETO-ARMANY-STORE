@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ARMANY STORE | Grupo de Achadinhos e Ofertas no WhatsApp</title>
+  <meta name="description"
+    content="Entre no grupo gratuito da ARMANY STORE no WhatsApp e receba achadinhos, ofertas, promoções e novidades de casa, beleza, eletrônicos, moda e variedades todos os dias.">
+  <meta name="keywords" content="achadinhos, ofertas, promoções, variedades, grupo de WhatsApp, ARMANY STORE">
+  <meta name="theme-color" content="#4a2614">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ARMANY STORE | Achadinhos e ofertas no WhatsApp">
+  <meta property="og:description"
+    content="Ofertas, novidades e produtos selecionados todos os dias. Entre no grupo gratuito da ARMANY STORE.">
+  <meta property="og:image" content="HERO_IMAGE_URL_AQUI">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- FAVICON (troque pelo seu arquivo quando tiver) -->
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%234a2614'/%3E%3Cpath d='M18 52 50 24l32 28' fill='none' stroke='%23c98a4b' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ctext x='50' y='80' font-size='38' text-anchor='middle' font-family='Georgia' font-weight='700' fill='%23fbf5ec'%3EA%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <style>
+    /* ============ VARIÁVEIS / PALETA ============ */
+    :root {
+      --brown-900: #2f180d;
+      --brown-800: #44230f;
+      --brown-700: #5a2e17;
+      --caramel: #b9743a;
+      --caramel-light: #d49a5c;
+      --gold: #c9a15a;
+      --beige: #efdcc3;
+      --cream: #fbf5ec;
+      --white: #ffffff;
+      --text: #3a2416;
+      --muted: #7b6552;
+      --radius: 22px;
+      --shadow-sm: 0 6px 18px rgba(74, 38, 20, .08);
+      --shadow-md: 0 14px 38px rgba(74, 38, 20, .14);
+      --shadow-lg: 0 24px 60px rgba(74, 38, 20, .22);
+      --font-title: 'Montserrat', system-ui, -apple-system, sans-serif;
+      --font-body: 'Montserrat', system-ui, -apple-system, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 84px
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.6;
+      overflow-x: hidden;
+      animation: pageIn .8s ease both
+    }
+
+    @keyframes pageIn {
+      from {
+        opacity: 0
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    img {
+      max-width: 100%;
+      display: block
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    ul {
+      list-style: none
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin-inline: auto
+    }
+
+    section {
+      padding: 96px 0
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--caramel);
+      margin-bottom: 12px
+    }
+
+    .section-head {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 56px
+    }
+
+    .section-head h2 {
+      font-family: var(--font-title);
+      font-size: clamp(1.9rem, 4vw, 2.8rem);
+      line-height: 1.15;
+      color: var(--brown-800);
+      margin-bottom: 14px
+    }
+
+    .section-head p {
+      color: var(--muted);
+      font-size: 1.05rem
+    }
+
+    /* ============ BOTÕES ============ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-family: var(--font-body);
+      font-weight: 700;
+      border: 0;
+      cursor: pointer;
+      border-radius: 999px;
+      transition: transform .25s ease, box-shadow .25s ease, background .25s ease
+    }
+
+    .btn-primary {
+      background: rgb(255, 102, 0); 
+      color: #fff;
+      padding: 20px 38px;
+      font-size: 1.05rem;
+      letter-spacing: .04em;
+      box-shadow: 0 12px 28px rgba(154, 90, 38, .4)
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 36px rgba(154, 90, 38, .5)
+    }
+
+    .btn-primary:active {
+      transform: translateY(0)
+    }
+
+    .btn-pulse {
+      animation: pulse 2.6s ease-in-out infinite
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        box-shadow: 0 12px 28px rgba(154, 90, 38, .4), 0 0 0 0 rgba(185, 116, 58, .45)
+      }
+
+      50% {
+        box-shadow: 0 12px 28px rgba(154, 90, 38, .4), 0 0 0 16px rgba(185, 116, 58, 0)
+      }
+    }
+
+    .btn-small {
+      background: var(--brown-800);
+      color: #fff;
+      padding: 12px 22px;
+      font-size: .9rem
+    }
+
+    .btn-small:hover {
+      background: var(--caramel);
+      transform: translateY(-2px)
+    }
+
+    .btn-light {
+      background: #fff;
+      color: var(--brown-800);
+      padding: 20px 38px;
+      font-size: 1.05rem;
+      letter-spacing: .04em;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, .25)
+    }
+
+    .btn-light:hover {
+      transform: translateY(-3px);
+      background: var(--beige)
+    }
+
+    .btn svg {
+      width: 22px;
+      height: 22px;
+      flex: none
+    }
+
+    /* ============ HEADER ============ */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(251, 245, 236, .88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(185, 116, 58, .15);
+      transition: box-shadow .3s
+    }
+
+    header.scrolled {
+      box-shadow: var(--shadow-sm)
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      line-height: 1
+    }
+
+    .logo img {
+      height: 52px;
+      width: auto
+    }
+
+    /* Logo tipográfica (usada quando não há LOGO_URL) */
+    .logo-type {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: var(--brown-700)
+    }
+
+    .logo-type svg.roof {
+      width: 46px;
+      height: auto;
+      margin-bottom: -4px
+    }
+
+    .logo-type .lt-name {
+      font-family: var(--font-title);
+      font-weight: 800;
+      font-size: 1.65rem;
+      letter-spacing: -.01em
+    }
+
+    .logo-type .lt-store {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .62rem;
+      letter-spacing: .42em;
+      color: var(--caramel);
+      font-weight: 700;
+      margin-top: 2px
+    }
+
+    .logo-type .lt-store::before,
+    .logo-type .lt-store::after {
+      content: "";
+      width: 18px;
+      height: 2px;
+      background: var(--caramel)
+    }
+
+    .logo-type.light {
+      color: var(--cream)
+    }
+
+    .logo-type.light .lt-store {
+      color: var(--gold)
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 34px
+    }
+
+    .menu a.link {
+      font-weight: 500;
+      font-size: .96rem;
+      color: var(--brown-700);
+      position: relative;
+      padding: 6px 0
+    }
+
+    .menu a.link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: var(--caramel);
+      transition: width .3s
+    }
+
+    .menu a.link:hover::after {
+      width: 100%
+    }
+
+    .hamburger {
+      display: none;
+      width: 44px;
+      height: 44px;
+      background: none;
+      border: 0;
+      cursor: pointer;
+      position: relative
+    }
+
+    .hamburger span {
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      height: 2.5px;
+      background: var(--brown-800);
+      border-radius: 3px;
+      transition: .3s
+    }
+
+    .hamburger span:nth-child(1) {
+      top: 14px
+    }
+
+    .hamburger span:nth-child(2) {
+      top: 21px
+    }
+
+    .hamburger span:nth-child(3) {
+      top: 28px
+    }
+
+    .hamburger.open span:nth-child(1) {
+      top: 21px;
+      transform: rotate(45deg)
+    }
+
+    .hamburger.open span:nth-child(2) {
+      opacity: 0
+    }
+
+    .hamburger.open span:nth-child(3) {
+      top: 21px;
+      transform: rotate(-45deg)
+    }
+
+    /* ============ HERO ============ */
+    .hero {
+      padding: 150px 0 90px;
+      position: relative;
+      background:
+        radial-gradient(circle at 85% 20%, rgba(212, 154, 92, .28), transparent 50%),
+        linear-gradient(160deg, #fdf8f0 0%, var(--beige) 100%);
+      overflow: hidden
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      left: -180px;
+      bottom: -220px;
+      width: 560px;
+      height: 560px;
+      border-radius: 50%;
+      background: rgba(201, 161, 90, .13)
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 56px;
+      align-items: center;
+      position: relative
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff;
+      border: 1px solid rgba(185, 116, 58, .3);
+      color: var(--brown-700);
+      font-weight: 600;
+      font-size: .85rem;
+      padding: 8px 16px;
+      border-radius: 999px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 22px
+    }
+
+    .hero-badge i {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #2fb457;
+      box-shadow: 0 0 0 4px rgba(47, 180, 87, .2)
+    }
+
+    .hero h1 {
+      font-family: var(--font-title);
+      font-size: clamp(2.5rem, 5.6vw, 4.3rem);
+      line-height: 1.06;
+      color: var(--brown-900);
+      font-weight: 800;
+      letter-spacing: -.015em
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--caramel);
+      display: block
+    }
+
+    .hero p.sub {
+      margin: 24px 0 34px;
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 520px
+    }
+
+    .hero .micro {
+      margin-top: 20px;
+      font-size: .92rem;
+      color: var(--brown-700);
+      font-weight: 500
+    }
+
+    .hero .micro span {
+      color: var(--caramel);
+      margin: 0 4px
+    }
+
+    .trust {
+      display: flex;
+      gap: 26px;
+      margin-top: 36px;
+      flex-wrap: wrap
+    }
+
+    .trust div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: .88rem;
+      font-weight: 600;
+      color: var(--brown-700)
+    }
+
+    .trust b {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(185, 116, 58, .14);
+      display: grid;
+      place-items: center;
+      font-size: 1.05rem
+    }
+
+    /* Composição visual do hero */
+    .hero-visual {
+      position: relative;
+      aspect-ratio: 1/1.02;
+      max-width: 540px;
+      margin-inline: auto;
+      width: 100%
+    }
+
+    .hero-visual .arc {
+      position: absolute;
+      inset: 6% 0 0 6%;
+      border-radius: 46% 54% 50% 50%/52% 48% 52% 48%;
+      background: linear-gradient(150deg, #f7e8d2, #e4c49b 70%, #d7a874);
+      box-shadow: var(--shadow-lg)
+    }
+
+    .hero-visual img.hero-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 36px;
+      box-shadow: var(--shadow-lg)
+    }
+
+    .prod {
+      position: absolute;
+      background: #fff;
+      border-radius: 22px;
+      box-shadow: var(--shadow-md);
+      display: grid;
+      place-items: center;
+      overflow: hidden
+    }
+
+    .prod img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 22px
+    }
+
+    #garrafa {
+      width: 90%;
+      height: 90%;
+      object-fit: cover;
+      border-radius: 22px;
+    }
+
+    .p1 {
+      width: 34%;
+      aspect-ratio: 1;
+      left: 2%;
+      top: 22%
+    }
+
+    .p2 {
+      width: 40%;
+      aspect-ratio: 1;
+      left: 30%;
+      top: 4%;
+      background: linear-gradient(145deg, #fff, #f6e7d1)
+    }
+
+    .p3 {
+      width: 44%;
+      aspect-ratio: 1;
+      right: 2%;
+      top: 34%;
+      background: #fff
+    }
+
+    .p4 {
+      width: 30%;
+      aspect-ratio: 1;
+      left: 20%;
+      bottom: 6%
+    }
+
+    .p5 {
+      width: 26%;
+      aspect-ratio: 1;
+      right: 14%;
+      bottom: 2%;
+      background: linear-gradient(145deg, #fff, #f6e7d1)
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0)
+      }
+
+      50% {
+        transform: translateY(-12px)
+      }
+    }
+
+    .float-tag {
+      position: absolute;
+      z-index: 3;
+      background: #fff;
+      border-radius: 16px;
+      padding: 10px 16px;
+      box-shadow: var(--shadow-md);
+      font-weight: 700;
+      font-size: .85rem;
+      color: var(--brown-800);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      animation: float 5s ease-in-out infinite
+    }
+
+    .ft1 {
+      left: -2%;
+      bottom: 30%;
+      animation-delay: -1s
+    }
+
+    .ft2 {
+      right: 0;
+      top: 8%;
+      animation-delay: -2.5s;
+      background: var(--caramel);
+      color: #fff
+    }
+
+    /* ============ CATEGORIAS ============ */
+    .cats {
+      background: var(--cream)
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px
+    }
+
+    /* ============ DIVISORES DE SEÇÃO ============ */
+    .section-divider {
+      display: block;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      margin: 0;
+      padding: 0
+    }
+
+    .section-divider svg {
+      display: block;
+      width: 100%;
+      height: 80px
+    }
+
+    .card {
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 32px 26px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid rgba(185, 116, 58, .12);
+      transition: transform .3s ease, box-shadow .3s ease, border-color .3s
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(185, 116, 58, .4)
+    }
+
+    .card .ico {
+      width: 62px;
+      height: 62px;
+      border-radius: 18px;
+      background: linear-gradient(145deg, var(--beige), #f7ead6);
+      display: grid;
+      place-items: center;
+      font-size: 1.9rem;
+      margin-bottom: 18px
+    }
+
+    .card h3 {
+      font-family: var(--font-title);
+      font-size: 1.28rem;
+      color: var(--brown-800);
+      margin-bottom: 6px
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: .95rem
+    }
+
+    /* ============ OFERTAS ============ */
+    .offers {
+      background: var(--beige);
+      padding-top: 0
+    }
+
+    .offer-card {
+      background: #fff;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: transform .3s, box-shadow .3s;
+      display: flex;
+      flex-direction: column
+    }
+
+    .offer-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-md)
+    }
+
+    .offer-img {
+      position: relative;
+      aspect-ratio: 4/3;
+      display: grid;
+      place-items: center;
+      font-size: 4rem;
+      overflow: hidden
+    }
+
+
+    .offer-img img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover
+    }
+
+    .offer-img .tag {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      z-index: 2;
+      background: var(--brown-800);
+      color: #fff;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      padding: 6px 12px;
+      border-radius: 999px
+    }
+
+    .g1 {
+      background: linear-gradient(135deg, #f3dcbc, #dba96d)
+    }
+
+    .g2 {
+      background: linear-gradient(135deg, #ead3b6, #b9743a)
+    }
+
+    .g3 {
+      background: linear-gradient(135deg, #f6e7d1, #cfa56b)
+    }
+
+    .g4 {
+      background: linear-gradient(135deg, #d9b48a, #7a4222)
+    }
+
+    .offer-body {
+      padding: 24px
+    }
+
+    .offer-body h3 {
+      font-family: var(--font-title);
+      font-size: 1.2rem;
+      color: var(--brown-800);
+      margin-bottom: 6px
+    }
+
+    .offer-body p {
+      color: var(--muted);
+      font-size: .93rem;
+      margin-bottom: 16px
+    }
+
+    .offer-body a {
+      font-weight: 700;
+      color: var(--caramel);
+      font-size: .92rem;
+      display: inline-flex;
+      gap: 6px;
+      align-items: center;
+      transition: gap .25s
+    }
+
+    .offer-body a:hover {
+      gap: 12px
+    }
+
+    .note {
+      text-align: center;
+      margin-top: 30px;
+      font-size: .88rem;
+      color: var(--muted)
+    }
+
+    /* ============ URGÊNCIA ============ */
+    .urgent {
+      padding: 40px 0
+    }
+
+    .urgent-box {
+      background: linear-gradient(135deg, var(--brown-900) 0%, var(--brown-700) 100%);
+      border-radius: 36px;
+      padding: 72px 48px;
+      text-align: center;
+      color: var(--cream);
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg)
+    }
+
+    .urgent-box::before,
+    .urgent-box::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(201, 161, 90, .3), transparent 70%)
+    }
+
+    .urgent-box::before {
+      width: 380px;
+      height: 380px;
+      top: -160px;
+      right: -100px
+    }
+
+    .urgent-box::after {
+      width: 320px;
+      height: 320px;
+      bottom: -160px;
+      left: -80px
+    }
+
+    .urgent-box>* {
+      position: relative;
+      z-index: 1
+    }
+
+    .urgent-box h2 {
+      font-family: var(--font-title);
+      font-size: clamp(1.9rem, 4.4vw, 3.1rem);
+      line-height: 1.15;
+      margin-bottom: 18px
+    }
+
+    .urgent-box p {
+      max-width: 620px;
+      margin: 0 auto 32px;
+      font-size: 1.08rem;
+      color: #ecd9c0
+    }
+
+    /* ============ CTA FINAL ============ */
+    .final {
+      padding: 0 0 96px
+    }
+
+    .final-box {
+      border-radius: 40px;
+      padding: 88px 40px;
+      text-align: center;
+      background:
+        radial-gradient(circle at 20% 0%, rgba(255, 255, 255, .35), transparent 50%),
+        linear-gradient(135deg, var(--caramel-light) 0%, var(--caramel) 55%, #8f5122 100%);
+      color: #fff;
+      box-shadow: var(--shadow-lg)
+    }
+
+    .final-box h2 {
+      font-family: var(--font-title);
+      font-size: clamp(2rem, 4.8vw, 3.4rem);
+      line-height: 1.12;
+      margin-bottom: 16px
+    }
+
+    .final-box p {
+      font-size: 1.12rem;
+      max-width: 560px;
+      margin: 0 auto 34px;
+      color: #fdf1e0
+    }
+
+    /* ============ FOOTER ============ */
+    footer {
+      background: var(--brown-900);
+      color: #d9c3a8;
+      padding: 64px 0 28px
+    }
+
+    .foot-grid {
+      display: flex;
+      justify-content: space-between;
+      gap: 36px;
+      flex-wrap: wrap;
+      padding-bottom: 36px;
+      border-bottom: 1px solid rgba(255, 255, 255, .1)
+    }
+
+    .foot-grid p {
+      margin-top: 14px;
+      max-width: 320px;
+      font-size: .95rem
+    }
+
+    .foot-links {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+      align-items: flex-start
+    }
+
+    .foot-links a {
+      font-size: .95rem;
+      transition: color .25s
+    }
+
+    .foot-links a:hover {
+      color: var(--gold)
+    }
+
+    .copy {
+      text-align: center;
+      padding-top: 26px;
+      font-size: .85rem;
+      color: #a58d73
+    }
+
+    /* ============ WHATSAPP FLUTUANTE ============ */
+    .wa-float {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 200;
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      background: #25d366;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 10px 26px rgba(37, 211, 102, .5);
+      transition: transform .25s;
+      animation: waPulse 2.8s infinite
+    }
+
+    .wa-float:hover {
+      transform: scale(1.1)
+    }
+
+    .wa-float svg {
+      width: 34px;
+      height: 34px;
+      fill: #fff
+    }
+
+    @keyframes waPulse {
+
+      0%,
+      100% {
+        box-shadow: 0 10px 26px rgba(37, 211, 102, .5), 0 0 0 0 rgba(37, 211, 102, .5)
+      }
+
+      50% {
+        box-shadow: 0 10px 26px rgba(37, 211, 102, .5), 0 0 0 14px rgba(37, 211, 102, 0)
+      }
+    }
+
+    /* ============ REVEAL ON SCROLL ============ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .7s ease, transform .7s ease
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: none
+    }
+
+    .reveal.d1 {
+      transition-delay: .08s
+    }
+
+    .reveal.d2 {
+      transition-delay: .16s
+    }
+
+    .reveal.d3 {
+      transition-delay: .24s
+    }
+
+    /* ============ RESPONSIVO ============ */
+    @media (max-width:1024px) {
+
+      .grid-4,
+      .why-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .hero-grid {
+        gap: 36px
+      }
+    }
+
+    @media (max-width:860px) {
+      section {
+        padding: 72px 0
+      }
+
+      .hamburger {
+        display: block
+      }
+
+      .menu {
+        position: fixed;
+        top: 76px;
+        left: 0;
+        right: 0;
+        background: var(--cream);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 12px 6% 24px;
+        box-shadow: var(--shadow-md);
+        transform: translateY(-12px);
+        opacity: 0;
+        pointer-events: none;
+        transition: .3s
+      }
+
+      .menu.open {
+        transform: none;
+        opacity: 1;
+        pointer-events: auto
+      }
+
+      .menu a.link {
+        padding: 16px 4px;
+        border-bottom: 1px solid rgba(185, 116, 58, .15);
+        font-size: 1.05rem
+      }
+
+      .menu .btn-small {
+        margin-top: 18px;
+        padding: 16px
+      }
+
+      .nav {
+        height: 68px
+      }
+
+      .menu {
+        top: 68px
+      }
+
+      .hero {
+        padding: 112px 0 64px
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center
+      }
+
+      .hero p.sub {
+        margin-inline: auto
+      }
+
+      .hero .btn-primary {
+        width: 100%
+      }
+
+      .trust {
+        justify-content: center
+      }
+
+      .hero-visual {
+        max-width: 420px;
+        order: 2
+      }
+
+      .steps {
+        grid-template-columns: 1fr
+      }
+
+      .urgent-box {
+        padding: 52px 24px;
+        border-radius: 28px
+      }
+
+      .final-box {
+        padding: 60px 24px;
+        border-radius: 28px
+      }
+
+      .urgent .btn,
+      .final .btn {
+        width: 100%;
+        padding-inline: 20px
+      }
+    }
+
+    @media (max-width:560px) {
+      .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr;
+        gap: 16px
+      }
+
+      .card {
+        padding: 22px 16px
+      }
+
+      .card .ico {
+        width: 52px;
+        height: 52px;
+        font-size: 1.6rem
+      }
+
+      .card h3 {
+        font-size: 1.08rem
+      }
+
+      .card p {
+        font-size: .86rem
+      }
+
+      #ofertas .grid-4 {
+        grid-template-columns: 1fr
+      }
+
+      .btn-primary,
+      .btn-light {
+        font-size: .98rem;
+        padding: 18px 22px
+      }
+
+      .wa-float {
+        width: 56px;
+        height: 56px;
+        right: 14px;
+        bottom: 14px
+      }
+
+      .foot-grid {
+        flex-direction: column
+      }
+
+      .logo-type .lt-name {
+        font-size: 1.45rem
+      }
+    }
+
+    @media (prefers-reduced-motion:reduce) {
+      * {
+        animation: none !important;
+        transition: none !important
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header id="topo">
+    <div class="container nav">
+      <a href="#inicio" class="logo" aria-label="ARMANY STORE - início" id="logoHeader">
+        <!-- LOGO TIPOGRÁFICA (será trocada pela imagem se IMAGENS.logo for preenchido) -->
+        <div class="logo-type">
+          <svg class="roof" viewBox="0 0 120 50" aria-hidden="true">
+            <path d="M6 44 60 6l54 38" fill="none" stroke="#b9743a" stroke-width="9" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M20 44 60 16l40 28" fill="none" stroke="#5a2e17" stroke-width="5" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <rect x="52" y="24" width="7" height="7" fill="#b9743a" />
+            <rect x="61" y="24" width="7" height="7" fill="#b9743a" />
+          </svg>
+          <span class="lt-name">Armany</span>
+          <span class="lt-store">STORE</span>
+        </div>
+      </a>
+
+      <nav class="menu" id="menu" aria-label="Menu principal">
+        <a class="link" href="#inicio">Início</a>
+        <a class="link" href="#achadinhos">Achadinhos</a>
+        <a class="link" href="#ofertas">Ofertas</a>
+        <a class="btn btn-small" data-cta href="#" target="_blank" rel="noopener">Entrar no grupo</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div>
+          <h1 class="reveal d1">Os melhores <em>achadinhos</em> estão aqui.</h1>
+          <p class="sub reveal d2">Ofertas, novidades e produtos incríveis selecionados para você. Entre no grupo da
+            ARMANY STORE e descubra oportunidades que valem a pena.</p>
+          <div class="reveal d3">
+            <a class="btn btn-primary btn-pulse" data-cta
+              href="https://chat.whatsapp.com/HvkcC0thfUy14cmcciFsPq?mode=gi_t" target="_blank">
+              <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M16.003 3C9.374 3 4 8.373 4 15c0 2.385.697 4.607 1.894 6.48L4 29l7.718-1.857A11.94 11.94 0 0 0 16.003 27C22.63 27 28 21.627 28 15S22.63 3 16.003 3zm0 21.8a9.77 9.77 0 0 1-5.03-1.39l-.36-.214-4.58 1.1 1.14-4.46-.235-.37A9.76 9.76 0 0 1 6.2 15c0-5.42 4.39-9.8 9.8-9.8 5.42 0 9.8 4.38 9.8 9.8s-4.38 9.8-9.8 9.8zm5.4-7.34c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15s-.77.96-.94 1.16c-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.48.71.31 1.26.49 1.7.63.71.23 1.36.2 1.88.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35z" />
+              </svg>
+              QUERO ENTRAR NO GRUPO
+            </a>
+          </div>
+        </div>
+
+        <!-- Visual do hero: usa imagem se IMAGENS.hero estiver preenchido; senão, composição em CSS -->
+        <div class="hero-visual reveal d2" id="heroVisual">
+          <div class="arc"></div>
+          <div class="prod p2"><img src="img/hero_elastico.png" alt="Elástico de exercício"></div>
+          <div class="prod p1"><img src="img/hero_natal_caneca.png" alt="Kit Natal caneca e urso"></div>
+          <div class="prod p3"><img src="img/hero_arvore.png" alt="Árvore de Natal com luzes"></div>
+          <div class="prod p4"><img src="img/garrafa.webp" alt="Garrafa térmica banana" id="garrafa"></div>
+          <div class="prod p5"><img src="img/pistacarro.webp" alt="Pista de Carrinho" width="10px" height="10px"></div>
+          <div class="float-tag ft1">Preço especial</div>
+          <div class="float-tag ft2">Achadinho do dia</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CATEGORIAS ================= -->
+    <section class="cats" id="achadinhos">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">O que você encontra no grupo</span>
+          <h2>Achadinhos para todos os gostos</h2>
+          <p>Da casa ao guarda-roupa, da cozinha aos games: a gente garimpa e você aproveita.</p>
+        </div>
+        <div class="grid-4">
+          <article class="card reveal">
+            <div class="ico"><img src="casa.png" alt="casa" width="50px"></div>
+            <h3>Casa</h3>
+            <p>Organização, decoração e utilidades para deixar tudo no lugar.</p>
+          </article>
+          <article class="card reveal d1">
+            <div class="ico"><img src="cuidados-com-a-pele.png" alt="beleza" width="50px"></div>
+            <h3>Beleza</h3>
+            <p>Cuidados e novidades para se sentir bem todos os dias.</p>
+          </article>
+          <article class="card reveal d2">
+            <div class="ico"><img src="dispositivos-eletronicos.png" alt="eletronicos" width="50px"></div>
+            <h3>Eletrônicos</h3>
+            <p>Gadgets, acessórios e tecnologia com ótimo custo-benefício.</p>
+          </article>
+          <article class="card reveal d3">
+            <div class="ico"><img src="cabide.png" alt="moda" width="50px"></div>
+            <h3>Moda</h3>
+            <p>Looks, acessórios e peças que combinam estilo e preço justo.</p>
+          </article>
+          <article class="card reveal">
+            <div class="ico"><img src="utensilios-de-cozinha.png" alt="cozinha" width="50px"></div>
+            <h3>Cozinha</h3>
+            <p>Utensílios práticos que facilitam do café ao jantar.</p>
+          </article>
+          <article class="card reveal d1">
+            <div class="ico"><img src="bicho-de-estimacao.png" alt="pet" width="50px"></div>
+            <h3>Pet</h3>
+            <p>Achados para mimar e cuidar do seu melhor amigo.</p>
+          </article>
+          <article class="card reveal d2">
+            <div class="ico"><img src="circuito.png" alt="games" width="50px"></div>
+            <h3>Games</h3>
+            <p>Acessórios e novidades para quem gosta de jogar.</p>
+          </article>
+          <article class="card reveal d3">
+            <div class="ico"><img src="sacolas-de-compras.png" alt="variedades" width="50px"></div>
+            <h3>Variedades</h3>
+            <p>Aquele produto inesperado que você nem sabia que precisava.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Divisor: Categorias → Ofertas -->
+    <div class="section-divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,0 C360,80 1080,0 1440,60 L1440,80 L0,80 Z" fill="#efdcc3" />
+      </svg>
+    </div>
+
+    <!-- ================= OFERTAS (EXEMPLOS ILUSTRATIVOS) ================= -->
+    <section class="offers" id="ofertas">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Um gostinho do grupo</span>
+          <h2>Ofertas que valem a pena</h2>
+          <p>Todo dia tem novidade chegando. Veja o tipo de achadinho que você recebe.</p>
+        </div>
+        <div class="grid-4">
+          <article class="offer-card reveal">
+            <div class="offer-img" style="background:#fff;">
+              <img src="img/camera.jpg" alt="Câmera de segurança WiFi" loading="lazy" width="50" id="camera">
+            </div>
+            <div class="offer-body">
+              <h3>Achadinhos para casa</h3>
+              <p>Ideias práticas e bonitas para o seu lar.</p><a data-cta href="#" target="_blank" rel="noopener">Ver
+                achadinhos →</a>
+            </div>
+          </article>
+          <article class="offer-card reveal d1">
+            <div class="offer-img" style="background:#fff;">
+              <img src="img/oferta_panela.png" alt="Panela elétrica" loading="lazy">
+            </div>
+            <div class="offer-body">
+              <h3>Produtos que facilitam seu dia</h3>
+              <p>Soluções simples que economizam tempo.</p><a data-cta href="#" target="_blank" rel="noopener">Ver
+                achadinhos →</a>
+            </div>
+          </article>
+          <article class="offer-card reveal d2">
+            <div class="offer-img" style="background:#fff;">
+              <img src="imgbalanca2.jpg" alt="Balança digital inteligente" loading="lazy" width="50px" height="50px"
+                id="balanca">
+            </div>
+            <div class="offer-body">
+              <h3>Ofertas que valem a pena</h3>
+              <p>Preços especiais garimpados pela nossa equipe.</p><a data-cta href="#" target="_blank"
+                rel="noopener">Ver achadinhos →</a>
+            </div>
+          </article>
+          <article class="offer-card reveal d3">
+            <div class="offer-img" style="background:#fff;">
+              <img src="img/oferta_bola.png" alt="Bola de pilates com bomba" loading="lazy">
+            </div>
+            <div class="offer-body">
+              <h3>Novidades que encontramos</h3>
+              <p>Lançamentos e tendências antes de todo mundo.</p><a data-cta href="#" target="_blank"
+                rel="noopener">Ver achadinhos →</a>
+            </div>
+          </article>
+        </div>
+        <p class="note reveal">*Exemplos ilustrativos. As ofertas reais são divulgadas no grupo e podem mudar a qualquer
+          momento.</p>
+      </div>
+    </section>
+
+    <!-- Divisor: Ofertas → CTA Final -->
+    <div class="section-divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,60 C360,0 1080,80 1440,20 L1440,80 L0,80 Z" fill="#fbf5ec" />
+      </svg>
+    </div>
+
+    <!-- ================= CTA FINAL ================= -->
+    <section class="final" id="contato">
+      <div class="container">
+        <div class="final-box reveal">
+          <h2>Pronto para descobrir seu próximo achadinho?</h2>
+          <p>Entre agora no grupo ARMANY STORE e fique por dentro das melhores oportunidades.</p>
+          <a class="btn btn-light btn-pulse" data-cta
+            href="https://chat.whatsapp.com/HvkcC0thfUy14cmcciFsPq?s=cl&p=a&mlu=4&ilr=4" target="_blank"
+            rel="noopener">QUERO ENTRAR NO GRUPO →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="container">
+      <div class="foot-grid">
+        <div>
+          <div class="logo-type light" id="logoFooter">
+            <svg class="roof" viewBox="0 0 120 50" aria-hidden="true">
+              <path d="M6 44 60 6l54 38" fill="none" stroke="#c9a15a" stroke-width="9" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M20 44 60 16l40 28" fill="none" stroke="#fbf5ec" stroke-width="5" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="52" y="24" width="7" height="7" fill="#c9a15a" />
+              <rect x="61" y="24" width="7" height="7" fill="#c9a15a" />
+            </svg>
+            <span class="lt-name">Armany</span>
+            <span class="lt-store">STORE</span>
+          </div>
+          <p>Achadinhos, ofertas e variedades em um só lugar.</p>
+        </div>
+        <nav class="foot-links" aria-label="Rodapé">
+          <a href="#inicio">Início</a>
+          <a href="#achadinhos">Achadinhos</a>
+          <a href="#ofertas">Ofertas</a>
+          <a href="#contato">Contato</a>
+        </nav>
+      </div>
+      <p class="copy">© 2026 ARMANY STORE. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ================= BOTÃO FLUTUANTE WHATSAPP ================= -->
+  <a class="wa-float" data-cta href="https://chat.whatsapp.com/HvkcC0thfUy14cmcciFsPq?s=cl&p=a&mlu=4&ilr=4"
+    target="_blank" rel="noopener" aria-label="Entrar no grupo de WhatsApp da ARMANY STORE">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path
+        d="M16.003 3C9.374 3 4 8.373 4 15c0 2.385.697 4.607 1.894 6.48L4 29l7.718-1.857A11.94 11.94 0 0 0 16.003 27C22.63 27 28 21.627 28 15S22.63 3 16.003 3zm0 21.8a9.77 9.77 0 0 1-5.03-1.39l-.36-.214-4.58 1.1 1.14-4.46-.235-.37A9.76 9.76 0 0 1 6.2 15c0-5.42 4.39-9.8 9.8-9.8 5.42 0 9.8 4.38 9.8 9.8s-4.38 9.8-9.8 9.8zm5.4-7.34c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15s-.77.96-.94 1.16c-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.48.71.31 1.26.49 1.7.63.71.23 1.36.2 1.88.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35z" />
+    </svg>
+  </a>
+
+  <script>
+    /* =====================================================================
+       ⚙️  CONFIGURAÇÕES — EDITE APENAS ESTA ÁREA
+       ===================================================================== */
+
+    /* 1) LINK DO GRUPO DO WHATSAPP (todos os botões usam esta variável) */
+    const WHATSAPP_LINK = "https://chat.whatsapp.com/HvkcC0thfUy14cmcciFsPq?mode=gi_t";
+
+    /* 2) IMAGENS — deixe com "_AQUI" para usar o visual padrão em CSS.
+          Para trocar, cole a URL (ou caminho, ex.: "img/logo.png"). */
+    const IMAGENS = {
+      logo: "LOGO_URL_AQUI",
+      hero: "HERO_IMAGE_URL_AQUI",
+    };
+
+    /* =====================================================================
+       FUNCIONAMENTO (não precisa mexer daqui para baixo)
+       ===================================================================== */
+
+    /* Imagem é considerada "preenchida" se não for um placeholder */
+    const temImagem = (v) => v && !/_AQUI$/.test(v);
+
+    /* ---- Aplica o link do WhatsApp em TODOS os CTAs ---- */
+    document.querySelectorAll('[data-cta]').forEach(el => {
+      el.setAttribute('href', WHATSAPP_LINK);
+      el.setAttribute('target', '_blank');
+      el.setAttribute('rel', 'noopener');
+    });
+
+    /* ---- Logo em imagem (header e footer) ---- */
+    if (temImagem(IMAGENS.logo)) {
+      const headerLogo = document.getElementById('logoHeader');
+      headerLogo.innerHTML = '<img src="' + IMAGENS.logo + '" alt="ARMANY STORE">';
+      const footerLogo = document.getElementById('logoFooter');
+      footerLogo.outerHTML = '<img src="' + IMAGENS.logo + '" alt="ARMANY STORE" style="height:60px;width:auto">';
+    }
+
+    /* ---- Imagem do hero ---- */
+    if (temImagem(IMAGENS.hero)) {
+      const hv = document.getElementById('heroVisual');
+      hv.innerHTML = '<img class="hero-img" src="' + IMAGENS.hero + '" alt="Achadinhos e ofertas ARMANY STORE">';
+    }
+
+    /* ---- Imagens dos cards de oferta ---- */
+    document.querySelectorAll('[data-img]').forEach(box => {
+      const src = IMAGENS[box.dataset.img];
+      if (temImagem(src)) {
+        const img = document.createElement('img');
+        img.src = src; img.alt = ''; img.loading = 'lazy';
+        box.insertBefore(img, box.firstChild);
+        const emoji = [...box.childNodes].find(n => n.nodeType === 3);
+        if (emoji) emoji.textContent = '';
+      }
+    });
+
+    /* ---- Menu hamburger ---- */
+    const burger = document.getElementById('hamburger');
+    const menu = document.getElementById('menu');
+    const toggleMenu = (open) => {
+      burger.classList.toggle('open', open);
+      menu.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', open);
+    };
+    burger.addEventListener('click', () => toggleMenu(!menu.classList.contains('open')));
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggleMenu(false)));
+
+    /* ---- Sombra no header ao rolar ---- */
+    const header = document.getElementById('topo');
+    window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 10), { passive: true });
+
+    /* ---- Animação de entrada ao rolar ---- */
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+
+</html>
