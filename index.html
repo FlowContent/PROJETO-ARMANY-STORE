@@ -7,28 +7,23 @@
   <title>ARMANY STORE | Grupo de Achadinhos e Ofertas no WhatsApp</title>
   <meta name="description"
     content="Entre no grupo gratuito da ARMANY STORE no WhatsApp e receba achadinhos, ofertas, promoções e novidades de casa, beleza, eletrônicos, moda e variedades todos os dias.">
-  <meta name="keywords" content="achadinhos, ofertas, promoções, variedades, grupo de WhatsApp, ARMANY STORE">
   <meta name="theme-color" content="#4a2614">
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="ARMANY STORE | Achadinhos e ofertas no WhatsApp">
   <meta property="og:description"
     content="Ofertas, novidades e produtos selecionados todos os dias. Entre no grupo gratuito da ARMANY STORE.">
-  <meta property="og:image" content="HERO_IMAGE_URL_AQUI">
   <meta property="og:locale" content="pt_BR">
 
-  <!-- FAVICON (troque pelo seu arquivo quando tiver) -->
   <link rel="icon"
     href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%234a2614'/%3E%3Cpath d='M18 52 50 24l32 28' fill='none' stroke='%23c98a4b' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ctext x='50' y='80' font-size='38' text-anchor='middle' font-family='Georgia' font-weight='700' fill='%23fbf5ec'%3EA%3C/text%3E%3C/svg%3E">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
 
   <style>
-    /* ============ VARIÁVEIS / PALETA ============ */
+    /* ============ PALETA ============ */
     :root {
       --brown-900: #2f180d;
       --brown-800: #44230f;
@@ -38,15 +33,12 @@
       --gold: #c9a15a;
       --beige: #efdcc3;
       --cream: #fbf5ec;
-      --white: #ffffff;
       --text: #3a2416;
       --muted: #7b6552;
       --radius: 22px;
       --shadow-sm: 0 6px 18px rgba(74, 38, 20, .08);
       --shadow-md: 0 14px 38px rgba(74, 38, 20, .14);
       --shadow-lg: 0 24px 60px rgba(74, 38, 20, .22);
-      --font-title: 'Montserrat', system-ui, -apple-system, sans-serif;
-      --font-body: 'Montserrat', system-ui, -apple-system, sans-serif;
     }
 
     * {
@@ -61,22 +53,11 @@
     }
 
     body {
-      font-family: var(--font-body);
+      font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
       color: var(--text);
       background: var(--cream);
       line-height: 1.6;
-      overflow-x: hidden;
-      animation: pageIn .8s ease both
-    }
-
-    @keyframes pageIn {
-      from {
-        opacity: 0
-      }
-
-      to {
-        opacity: 1
-      }
+      overflow-x: hidden
     }
 
     img {
@@ -119,7 +100,6 @@
     }
 
     .section-head h2 {
-      font-family: var(--font-title);
       font-size: clamp(1.9rem, 4vw, 2.8rem);
       line-height: 1.15;
       color: var(--brown-800);
@@ -133,11 +113,11 @@
 
     /* ============ BOTÕES ============ */
     .btn {
+      position: relative;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
-      font-family: var(--font-body);
       font-weight: 700;
       border: 0;
       cursor: pointer;
@@ -145,8 +125,15 @@
       transition: transform .25s ease, box-shadow .25s ease, background .25s ease
     }
 
+    .btn svg {
+      width: 22px;
+      height: 22px;
+      flex: none
+    }
+
     .btn-primary {
-      background: rgb(255, 102, 0); 
+      --ring: rgba(255, 102, 0, .6);
+      background: #f60;
       color: #fff;
       padding: 20px 38px;
       font-size: 1.05rem;
@@ -163,20 +150,19 @@
       transform: translateY(0)
     }
 
-    .btn-pulse {
-      animation: pulse 2.6s ease-in-out infinite
+    .btn-light {
+      --ring: rgba(255, 255, 255, .9);
+      background: #fff;
+      color: var(--brown-800);
+      padding: 20px 38px;
+      font-size: 1.05rem;
+      letter-spacing: .04em;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, .25)
     }
 
-    @keyframes pulse {
-
-      0%,
-      100% {
-        box-shadow: 0 12px 28px rgba(154, 90, 38, .4), 0 0 0 0 rgba(185, 116, 58, .45)
-      }
-
-      50% {
-        box-shadow: 0 12px 28px rgba(154, 90, 38, .4), 0 0 0 16px rgba(185, 116, 58, 0)
-      }
+    .btn-light:hover {
+      transform: translateY(-3px);
+      background: var(--beige)
     }
 
     .btn-small {
@@ -191,24 +177,28 @@
       transform: translateY(-2px)
     }
 
-    .btn-light {
-      background: #fff;
-      color: var(--brown-800);
-      padding: 20px 38px;
-      font-size: 1.05rem;
-      letter-spacing: .04em;
-      box-shadow: 0 12px 28px rgba(0, 0, 0, .25)
+    /* Anel pulsante: transform/opacity (composto na GPU, sem repaint) */
+    .btn-pulse::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      border: 2px solid var(--ring);
+      pointer-events: none;
+      animation: ring 2.6s ease-out infinite
     }
 
-    .btn-light:hover {
-      transform: translateY(-3px);
-      background: var(--beige)
-    }
+    @keyframes ring {
+      0% {
+        transform: scale(1);
+        opacity: .7
+      }
 
-    .btn svg {
-      width: 22px;
-      height: 22px;
-      flex: none
+      70%,
+      100% {
+        transform: scale(1.14);
+        opacity: 0
+      }
     }
 
     /* ============ HEADER ============ */
@@ -218,9 +208,7 @@
       left: 0;
       right: 0;
       z-index: 100;
-      background: rgba(251, 245, 236, .88);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
+      background: rgba(251, 245, 236, .96);
       border-bottom: 1px solid rgba(185, 116, 58, .15);
       transition: box-shadow .3s
     }
@@ -242,12 +230,6 @@
       line-height: 1
     }
 
-    .logo img {
-      height: 52px;
-      width: auto
-    }
-
-    /* Logo tipográfica (usada quando não há LOGO_URL) */
     .logo-type {
       display: flex;
       flex-direction: column;
@@ -262,7 +244,6 @@
     }
 
     .logo-type .lt-name {
-      font-family: var(--font-title);
       font-weight: 800;
       font-size: 1.65rem;
       letter-spacing: -.01em
@@ -399,31 +380,7 @@
       position: relative
     }
 
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: #fff;
-      border: 1px solid rgba(185, 116, 58, .3);
-      color: var(--brown-700);
-      font-weight: 600;
-      font-size: .85rem;
-      padding: 8px 16px;
-      border-radius: 999px;
-      box-shadow: var(--shadow-sm);
-      margin-bottom: 22px
-    }
-
-    .hero-badge i {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #2fb457;
-      box-shadow: 0 0 0 4px rgba(47, 180, 87, .2)
-    }
-
     .hero h1 {
-      font-family: var(--font-title);
       font-size: clamp(2.5rem, 5.6vw, 4.3rem);
       line-height: 1.06;
       color: var(--brown-900);
@@ -444,45 +401,6 @@
       max-width: 520px
     }
 
-    .hero .micro {
-      margin-top: 20px;
-      font-size: .92rem;
-      color: var(--brown-700);
-      font-weight: 500
-    }
-
-    .hero .micro span {
-      color: var(--caramel);
-      margin: 0 4px
-    }
-
-    .trust {
-      display: flex;
-      gap: 26px;
-      margin-top: 36px;
-      flex-wrap: wrap
-    }
-
-    .trust div {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: .88rem;
-      font-weight: 600;
-      color: var(--brown-700)
-    }
-
-    .trust b {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: rgba(185, 116, 58, .14);
-      display: grid;
-      place-items: center;
-      font-size: 1.05rem
-    }
-
-    /* Composição visual do hero */
     .hero-visual {
       position: relative;
       aspect-ratio: 1/1.02;
@@ -499,38 +417,18 @@
       box-shadow: var(--shadow-lg)
     }
 
-    .hero-visual img.hero-img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 36px;
-      box-shadow: var(--shadow-lg)
-    }
-
     .prod {
       position: absolute;
       background: #fff;
       border-radius: 22px;
       box-shadow: var(--shadow-md);
-      display: grid;
-      place-items: center;
       overflow: hidden
     }
 
     .prod img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      border-radius: 22px
-    }
-
-    #garrafa {
-      width: 90%;
-      height: 90%;
-      object-fit: cover;
-      border-radius: 22px;
+      object-fit: cover
     }
 
     .p1 {
@@ -552,15 +450,21 @@
       width: 44%;
       aspect-ratio: 1;
       right: 2%;
-      top: 34%;
-      background: #fff
+      top: 34%
     }
 
     .p4 {
       width: 30%;
       aspect-ratio: 1;
       left: 20%;
-      bottom: 6%
+      bottom: 6%;
+      display: grid;
+      place-items: center
+    }
+
+    .p4 img {
+      width: 90%;
+      height: 90%
     }
 
     .p5 {
@@ -569,18 +473,6 @@
       right: 14%;
       bottom: 2%;
       background: linear-gradient(145deg, #fff, #f6e7d1)
-    }
-
-    @keyframes float {
-
-      0%,
-      100% {
-        transform: translateY(0)
-      }
-
-      50% {
-        transform: translateY(-12px)
-      }
     }
 
     .float-tag {
@@ -593,9 +485,6 @@
       font-weight: 700;
       font-size: .85rem;
       color: var(--brown-800);
-      display: flex;
-      align-items: center;
-      gap: 8px;
       animation: float 5s ease-in-out infinite
     }
 
@@ -613,31 +502,30 @@
       color: #fff
     }
 
-    /* ============ CATEGORIAS ============ */
-    .cats {
-      background: var(--cream)
-    }
+    @keyframes float {
 
-    .grid-4 {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px
+      0%,
+      100% {
+        transform: translateY(0)
+      }
+
+      50% {
+        transform: translateY(-12px)
+      }
     }
 
     /* ============ DIVISORES DE SEÇÃO ============ */
-    .section-divider {
-      display: block;
-      width: 100%;
-      overflow: hidden;
-      line-height: 0;
-      margin: 0;
-      padding: 0
-    }
-
     .section-divider svg {
       display: block;
       width: 100%;
       height: 80px
+    }
+
+    /* ============ CATEGORIAS ============ */
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px
     }
 
     .card {
@@ -662,12 +550,16 @@
       background: linear-gradient(145deg, var(--beige), #f7ead6);
       display: grid;
       place-items: center;
-      font-size: 1.9rem;
       margin-bottom: 18px
     }
 
+    .card .ico img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain
+    }
+
     .card h3 {
-      font-family: var(--font-title);
       font-size: 1.28rem;
       color: var(--brown-800);
       margin-bottom: 6px
@@ -702,12 +594,9 @@
     .offer-img {
       position: relative;
       aspect-ratio: 4/3;
-      display: grid;
-      place-items: center;
-      font-size: 4rem;
+      background: #fff;
       overflow: hidden
     }
-
 
     .offer-img img {
       position: absolute;
@@ -717,42 +606,11 @@
       object-fit: cover
     }
 
-    .offer-img .tag {
-      position: absolute;
-      top: 14px;
-      left: 14px;
-      z-index: 2;
-      background: var(--brown-800);
-      color: #fff;
-      font-size: .72rem;
-      font-weight: 700;
-      letter-spacing: .08em;
-      padding: 6px 12px;
-      border-radius: 999px
-    }
-
-    .g1 {
-      background: linear-gradient(135deg, #f3dcbc, #dba96d)
-    }
-
-    .g2 {
-      background: linear-gradient(135deg, #ead3b6, #b9743a)
-    }
-
-    .g3 {
-      background: linear-gradient(135deg, #f6e7d1, #cfa56b)
-    }
-
-    .g4 {
-      background: linear-gradient(135deg, #d9b48a, #7a4222)
-    }
-
     .offer-body {
       padding: 24px
     }
 
     .offer-body h3 {
-      font-family: var(--font-title);
       font-size: 1.2rem;
       color: var(--brown-800);
       margin-bottom: 6px
@@ -785,63 +643,6 @@
       color: var(--muted)
     }
 
-    /* ============ URGÊNCIA ============ */
-    .urgent {
-      padding: 40px 0
-    }
-
-    .urgent-box {
-      background: linear-gradient(135deg, var(--brown-900) 0%, var(--brown-700) 100%);
-      border-radius: 36px;
-      padding: 72px 48px;
-      text-align: center;
-      color: var(--cream);
-      position: relative;
-      overflow: hidden;
-      box-shadow: var(--shadow-lg)
-    }
-
-    .urgent-box::before,
-    .urgent-box::after {
-      content: "";
-      position: absolute;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(201, 161, 90, .3), transparent 70%)
-    }
-
-    .urgent-box::before {
-      width: 380px;
-      height: 380px;
-      top: -160px;
-      right: -100px
-    }
-
-    .urgent-box::after {
-      width: 320px;
-      height: 320px;
-      bottom: -160px;
-      left: -80px
-    }
-
-    .urgent-box>* {
-      position: relative;
-      z-index: 1
-    }
-
-    .urgent-box h2 {
-      font-family: var(--font-title);
-      font-size: clamp(1.9rem, 4.4vw, 3.1rem);
-      line-height: 1.15;
-      margin-bottom: 18px
-    }
-
-    .urgent-box p {
-      max-width: 620px;
-      margin: 0 auto 32px;
-      font-size: 1.08rem;
-      color: #ecd9c0
-    }
-
     /* ============ CTA FINAL ============ */
     .final {
       padding: 0 0 96px
@@ -859,7 +660,6 @@
     }
 
     .final-box h2 {
-      font-family: var(--font-title);
       font-size: clamp(2rem, 4.8vw, 3.4rem);
       line-height: 1.12;
       margin-bottom: 16px
@@ -930,8 +730,7 @@
       display: grid;
       place-items: center;
       box-shadow: 0 10px 26px rgba(37, 211, 102, .5);
-      transition: transform .25s;
-      animation: waPulse 2.8s infinite
+      transition: transform .25s
     }
 
     .wa-float:hover {
@@ -944,16 +743,13 @@
       fill: #fff
     }
 
-    @keyframes waPulse {
-
-      0%,
-      100% {
-        box-shadow: 0 10px 26px rgba(37, 211, 102, .5), 0 0 0 0 rgba(37, 211, 102, .5)
-      }
-
-      50% {
-        box-shadow: 0 10px 26px rgba(37, 211, 102, .5), 0 0 0 14px rgba(37, 211, 102, 0)
-      }
+    .wa-float::after {
+      content: "";
+      position: absolute;
+      inset: -5px;
+      border-radius: 50%;
+      border: 2px solid rgba(37, 211, 102, .6);
+      animation: ring 2.8s ease-out infinite
     }
 
     /* ============ REVEAL ON SCROLL ============ */
@@ -982,9 +778,7 @@
 
     /* ============ RESPONSIVO ============ */
     @media (max-width:1024px) {
-
-      .grid-4,
-      .why-grid {
+      .grid-4 {
         grid-template-columns: repeat(2, 1fr)
       }
 
@@ -998,13 +792,17 @@
         padding: 72px 0
       }
 
+      .nav {
+        height: 68px
+      }
+
       .hamburger {
         display: block
       }
 
       .menu {
         position: fixed;
-        top: 76px;
+        top: 68px;
         left: 0;
         right: 0;
         background: var(--cream);
@@ -1036,14 +834,6 @@
         padding: 16px
       }
 
-      .nav {
-        height: 68px
-      }
-
-      .menu {
-        top: 68px
-      }
-
       .hero {
         padding: 112px 0 64px
       }
@@ -1061,22 +851,8 @@
         width: 100%
       }
 
-      .trust {
-        justify-content: center
-      }
-
       .hero-visual {
-        max-width: 420px;
-        order: 2
-      }
-
-      .steps {
-        grid-template-columns: 1fr
-      }
-
-      .urgent-box {
-        padding: 52px 24px;
-        border-radius: 28px
+        max-width: 420px
       }
 
       .final-box {
@@ -1084,7 +860,6 @@
         border-radius: 28px
       }
 
-      .urgent .btn,
       .final .btn {
         width: 100%;
         padding-inline: 20px
@@ -1093,13 +868,7 @@
 
     @media (max-width:560px) {
       .grid-4 {
-        grid-template-columns: repeat(2, 1fr);
         gap: 14px
-      }
-
-      .why-grid {
-        grid-template-columns: 1fr;
-        gap: 16px
       }
 
       .card {
@@ -1108,8 +877,12 @@
 
       .card .ico {
         width: 52px;
-        height: 52px;
-        font-size: 1.6rem
+        height: 52px
+      }
+
+      .card .ico img {
+        width: 40px;
+        height: 40px
       }
 
       .card h3 {
@@ -1165,8 +938,7 @@
   <!-- ================= HEADER ================= -->
   <header id="topo">
     <div class="container nav">
-      <a href="#inicio" class="logo" aria-label="ARMANY STORE - início" id="logoHeader">
-        <!-- LOGO TIPOGRÁFICA (será trocada pela imagem se IMAGENS.logo for preenchido) -->
+      <a href="#inicio" class="logo" aria-label="ARMANY STORE - início">
         <div class="logo-type">
           <svg class="roof" viewBox="0 0 120 50" aria-hidden="true">
             <path d="M6 44 60 6l54 38" fill="none" stroke="#b9743a" stroke-width="9" stroke-linecap="round"
@@ -1185,7 +957,8 @@
         <a class="link" href="#inicio">Início</a>
         <a class="link" href="#achadinhos">Achadinhos</a>
         <a class="link" href="#ofertas">Ofertas</a>
-        <a class="btn btn-small" data-cta href="#" target="_blank" rel="noopener">Entrar no grupo</a>
+        <a class="btn btn-small" href="https://chat.whatsapp.com/HvkcC0thfUy14cmcciFsPq?mode=gi_t" target="_blank"
+          rel="noopener">Entrar no grupo</a>
       </nav>
 
       <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
@@ -1204,8 +977,8 @@
           <p class="sub reveal d2">Ofertas, novidades e produtos incríveis selecionados para você. Entre no grupo da
             ARMANY STORE e descubra oportunidades que valem a pena.</p>
           <div class="reveal d3">
-            <a class="btn btn-primary btn-pulse" data-cta
-              href="https://chat.whatsapp.com/HvkcC0thfUy14cmcciFsPq?mode=gi_t" target="_blank">
+            <a class="btn btn-primary btn-pulse" href="https://chat.whatsapp.com/HvkcC0thfUy14cmcciFsPq?mode=gi_t"
+              target="_blank" rel="noopener">
               <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
                 <path
                   d="M16.003 3C9.374 3 4 8.373 4 15c0 2.385.697 4.607 1.894 6.48L4 29l7.718-1.857A11.94 11.94 0 0 0 16.003 27C22.63 27 28 21.627 28 15S22.63 3 16.003 3zm0 21.8a9.77 9.77 0 0 1-5.03-1.39l-.36-.214-4.58 1.1 1.14-4.46-.235-.37A9.76 9.76 0 0 1 6.2 15c0-5.42 4.39-9.8 9.8-9.8 5.42 0 9.8 4.38 9.8 9.8s-4.38 9.8-9.8 9.8zm5.4-7.34c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15s-.77.96-.94 1.16c-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.48.71.31 1.26.49 1.7.63.71.23 1.36.2 1.88.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35z" />
@@ -1215,14 +988,13 @@
           </div>
         </div>
 
-        <!-- Visual do hero: usa imagem se IMAGENS.hero estiver preenchido; senão, composição em CSS -->
-        <div class="hero-visual reveal d2" id="heroVisual">
+        <div class="hero-visual reveal d2">
           <div class="arc"></div>
-          <div class="prod p2"><img src="img/hero_elastico.png" alt="Elástico de exercício"></div>
+          <div class="prod p2"><img src="img/hero_elastico.png" alt="Elástico de exercício" fetchpriority="high"></div>
           <div class="prod p1"><img src="img/hero_natal_caneca.png" alt="Kit Natal caneca e urso"></div>
           <div class="prod p3"><img src="img/hero_arvore.png" alt="Árvore de Natal com luzes"></div>
-          <div class="prod p4"><img src="img/garrafa.webp" alt="Garrafa térmica banana" id="garrafa"></div>
-          <div class="prod p5"><img src="img/pistacarro.webp" alt="Pista de Carrinho" width="10px" height="10px"></div>
+          <div class="prod p4"><img src="img/garrafa.webp" alt="Garrafa térmica banana"></div>
+          <div class="prod p5"><img src="img/pistacarro.webp" alt="Pista de carrinho"></div>
           <div class="float-tag ft1">Preço especial</div>
           <div class="float-tag ft2">Achadinho do dia</div>
         </div>
@@ -1239,42 +1011,42 @@
         </div>
         <div class="grid-4">
           <article class="card reveal">
-            <div class="ico"><img src="casa.png" alt="casa" width="50px"></div>
+            <div class="ico"><img src="casa.png" alt="" width="50" height="50" loading="lazy"></div>
             <h3>Casa</h3>
             <p>Organização, decoração e utilidades para deixar tudo no lugar.</p>
           </article>
           <article class="card reveal d1">
-            <div class="ico"><img src="cuidados-com-a-pele.png" alt="beleza" width="50px"></div>
+            <div class="ico"><img src="cuidados-com-a-pele.png" alt="" width="50" height="50" loading="lazy"></div>
             <h3>Beleza</h3>
             <p>Cuidados e novidades para se sentir bem todos os dias.</p>
           </article>
           <article class="card reveal d2">
-            <div class="ico"><img src="dispositivos-eletronicos.png" alt="eletronicos" width="50px"></div>
+            <div class="ico"><img src="dispositivos-eletronicos.png" alt="" width="50" height="50" loading="lazy"></div>
             <h3>Eletrônicos</h3>
             <p>Gadgets, acessórios e tecnologia com ótimo custo-benefício.</p>
           </article>
           <article class="card reveal d3">
-            <div class="ico"><img src="cabide.png" alt="moda" width="50px"></div>
+            <div class="ico"><img src="cabide.png" alt="" width="50" height="50" loading="lazy"></div>
             <h3>Moda</h3>
             <p>Looks, acessórios e peças que combinam estilo e preço justo.</p>
           </article>
           <article class="card reveal">
-            <div class="ico"><img src="utensilios-de-cozinha.png" alt="cozinha" width="50px"></div>
+            <div class="ico"><img src="utensilios-de-cozinha.png" alt="" width="50" height="50" loading="lazy"></div>
             <h3>Cozinha</h3>
             <p>Utensílios práticos que facilitam do café ao jantar.</p>
           </article>
           <article class="card reveal d1">
-            <div class="ico"><img src="bicho-de-estimacao.png" alt="pet" width="50px"></div>
+            <div class="ico"><img src="bicho-de-estimacao.png" alt="" width="50" height="50" loading="lazy"></div>
             <h3>Pet</h3>
             <p>Achados para mimar e cuidar do seu melhor amigo.</p>
           </article>
           <article class="card reveal d2">
-            <div class="ico"><img src="circuito.png" alt="games" width="50px"></div>
+            <div class="ico"><img src="circuito.png" alt="" width="50" height="50" loading="lazy"></div>
             <h3>Games</h3>
             <p>Acessórios e novidades para quem gosta de jogar.</p>
           </article>
           <article class="card reveal d3">
-            <div class="ico"><img src="sacolas-de-compras.png" alt="variedades" width="50px"></div>
+            <div class="ico"><img src="sacolas-de-compras.png" alt="" width="50" height="50" loading="lazy"></div>
             <h3>Variedades</h3>
             <p>Aquele produto inesperado que você nem sabia que precisava.</p>
           </article>
@@ -1284,7 +1056,7 @@
 
     <!-- Divisor: Categorias → Ofertas -->
     <div class="section-divider" aria-hidden="true">
-      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
         <path d="M0,0 C360,80 1080,0 1440,60 L1440,80 L0,80 Z" fill="#efdcc3" />
       </svg>
     </div>
@@ -1299,44 +1071,47 @@
         </div>
         <div class="grid-4">
           <article class="offer-card reveal">
-            <div class="offer-img" style="background:#fff;">
-              <img src="img/camera.jpg" alt="Câmera de segurança WiFi" loading="lazy" width="50" id="camera">
+            <div class="offer-img">
+              <img src="img/camera.jpg" alt="Câmera de segurança WiFi" loading="lazy">
             </div>
             <div class="offer-body">
               <h3>Achadinhos para casa</h3>
-              <p>Ideias práticas e bonitas para o seu lar.</p><a data-cta href="#" target="_blank" rel="noopener">Ver
+              <p>Ideias práticas e bonitas para o seu lar.</p>
+              <a href="https://chat.whatsapp.com/HvkcC0thfUy14cmcciFsPq?mode=gi_t" target="_blank" rel="noopener">Ver
                 achadinhos →</a>
             </div>
           </article>
           <article class="offer-card reveal d1">
-            <div class="offer-img" style="background:#fff;">
+            <div class="offer-img">
               <img src="img/oferta_panela.png" alt="Panela elétrica" loading="lazy">
             </div>
             <div class="offer-body">
               <h3>Produtos que facilitam seu dia</h3>
-              <p>Soluções simples que economizam tempo.</p><a data-cta href="#" target="_blank" rel="noopener">Ver
+              <p>Soluções simples que economizam tempo.</p>
+              <a href="https://chat.whatsapp.com/HvkcC0thfUy14cmcciFsPq?mode=gi_t" target="_blank" rel="noopener">Ver
                 achadinhos →</a>
             </div>
           </article>
           <article class="offer-card reveal d2">
-            <div class="offer-img" style="background:#fff;">
-              <img src="imgbalanca2.jpg" alt="Balança digital inteligente" loading="lazy" width="50px" height="50px"
-                id="balanca">
+            <div class="offer-img">
+              <img src="imgbalanca2.jpg" alt="Balança digital inteligente" loading="lazy">
             </div>
             <div class="offer-body">
               <h3>Ofertas que valem a pena</h3>
-              <p>Preços especiais garimpados pela nossa equipe.</p><a data-cta href="#" target="_blank"
-                rel="noopener">Ver achadinhos →</a>
+              <p>Preços especiais garimpados pela nossa equipe.</p>
+              <a href="https://chat.whatsapp.com/HvkcC0thfUy14cmcciFsPq?mode=gi_t" target="_blank" rel="noopener">Ver
+                achadinhos →</a>
             </div>
           </article>
           <article class="offer-card reveal d3">
-            <div class="offer-img" style="background:#fff;">
+            <div class="offer-img">
               <img src="img/oferta_bola.png" alt="Bola de pilates com bomba" loading="lazy">
             </div>
             <div class="offer-body">
               <h3>Novidades que encontramos</h3>
-              <p>Lançamentos e tendências antes de todo mundo.</p><a data-cta href="#" target="_blank"
-                rel="noopener">Ver achadinhos →</a>
+              <p>Lançamentos e tendências antes de todo mundo.</p>
+              <a href="https://chat.whatsapp.com/HvkcC0thfUy14cmcciFsPq?mode=gi_t" target="_blank" rel="noopener">Ver
+                achadinhos →</a>
             </div>
           </article>
         </div>
@@ -1347,7 +1122,7 @@
 
     <!-- Divisor: Ofertas → CTA Final -->
     <div class="section-divider" aria-hidden="true">
-      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
         <path d="M0,60 C360,0 1080,80 1440,20 L1440,80 L0,80 Z" fill="#fbf5ec" />
       </svg>
     </div>
@@ -1358,9 +1133,8 @@
         <div class="final-box reveal">
           <h2>Pronto para descobrir seu próximo achadinho?</h2>
           <p>Entre agora no grupo ARMANY STORE e fique por dentro das melhores oportunidades.</p>
-          <a class="btn btn-light btn-pulse" data-cta
-            href="https://chat.whatsapp.com/HvkcC0thfUy14cmcciFsPq?s=cl&p=a&mlu=4&ilr=4" target="_blank"
-            rel="noopener">QUERO ENTRAR NO GRUPO →</a>
+          <a class="btn btn-light btn-pulse" href="https://chat.whatsapp.com/HvkcC0thfUy14cmcciFsPq?mode=gi_t"
+            target="_blank" rel="noopener">QUERO ENTRAR NO GRUPO →</a>
         </div>
       </div>
     </section>
@@ -1372,7 +1146,7 @@
     <div class="container">
       <div class="foot-grid">
         <div>
-          <div class="logo-type light" id="logoFooter">
+          <div class="logo-type light">
             <svg class="roof" viewBox="0 0 120 50" aria-hidden="true">
               <path d="M6 44 60 6l54 38" fill="none" stroke="#c9a15a" stroke-width="9" stroke-linecap="round"
                 stroke-linejoin="round" />
@@ -1398,8 +1172,8 @@
   </footer>
 
   <!-- ================= BOTÃO FLUTUANTE WHATSAPP ================= -->
-  <a class="wa-float" data-cta href="https://chat.whatsapp.com/HvkcC0thfUy14cmcciFsPq?s=cl&p=a&mlu=4&ilr=4"
-    target="_blank" rel="noopener" aria-label="Entrar no grupo de WhatsApp da ARMANY STORE">
+  <a class="wa-float" href="https://chat.whatsapp.com/HvkcC0thfUy14cmcciFsPq?mode=gi_t" target="_blank" rel="noopener"
+    aria-label="Entrar no grupo de WhatsApp da ARMANY STORE">
     <svg viewBox="0 0 32 32" aria-hidden="true">
       <path
         d="M16.003 3C9.374 3 4 8.373 4 15c0 2.385.697 4.607 1.894 6.48L4 29l7.718-1.857A11.94 11.94 0 0 0 16.003 27C22.63 27 28 21.627 28 15S22.63 3 16.003 3zm0 21.8a9.77 9.77 0 0 1-5.03-1.39l-.36-.214-4.58 1.1 1.14-4.46-.235-.37A9.76 9.76 0 0 1 6.2 15c0-5.42 4.39-9.8 9.8-9.8 5.42 0 9.8 4.38 9.8 9.8s-4.38 9.8-9.8 9.8zm5.4-7.34c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15s-.77.96-.94 1.16c-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.48.71.31 1.26.49 1.7.63.71.23 1.36.2 1.88.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35z" />
@@ -1407,61 +1181,7 @@
   </a>
 
   <script>
-    /* =====================================================================
-       ⚙️  CONFIGURAÇÕES — EDITE APENAS ESTA ÁREA
-       ===================================================================== */
-
-    /* 1) LINK DO GRUPO DO WHATSAPP (todos os botões usam esta variável) */
-    const WHATSAPP_LINK = "https://chat.whatsapp.com/HvkcC0thfUy14cmcciFsPq?mode=gi_t";
-
-    /* 2) IMAGENS — deixe com "_AQUI" para usar o visual padrão em CSS.
-          Para trocar, cole a URL (ou caminho, ex.: "img/logo.png"). */
-    const IMAGENS = {
-      logo: "LOGO_URL_AQUI",
-      hero: "HERO_IMAGE_URL_AQUI",
-    };
-
-    /* =====================================================================
-       FUNCIONAMENTO (não precisa mexer daqui para baixo)
-       ===================================================================== */
-
-    /* Imagem é considerada "preenchida" se não for um placeholder */
-    const temImagem = (v) => v && !/_AQUI$/.test(v);
-
-    /* ---- Aplica o link do WhatsApp em TODOS os CTAs ---- */
-    document.querySelectorAll('[data-cta]').forEach(el => {
-      el.setAttribute('href', WHATSAPP_LINK);
-      el.setAttribute('target', '_blank');
-      el.setAttribute('rel', 'noopener');
-    });
-
-    /* ---- Logo em imagem (header e footer) ---- */
-    if (temImagem(IMAGENS.logo)) {
-      const headerLogo = document.getElementById('logoHeader');
-      headerLogo.innerHTML = '<img src="' + IMAGENS.logo + '" alt="ARMANY STORE">';
-      const footerLogo = document.getElementById('logoFooter');
-      footerLogo.outerHTML = '<img src="' + IMAGENS.logo + '" alt="ARMANY STORE" style="height:60px;width:auto">';
-    }
-
-    /* ---- Imagem do hero ---- */
-    if (temImagem(IMAGENS.hero)) {
-      const hv = document.getElementById('heroVisual');
-      hv.innerHTML = '<img class="hero-img" src="' + IMAGENS.hero + '" alt="Achadinhos e ofertas ARMANY STORE">';
-    }
-
-    /* ---- Imagens dos cards de oferta ---- */
-    document.querySelectorAll('[data-img]').forEach(box => {
-      const src = IMAGENS[box.dataset.img];
-      if (temImagem(src)) {
-        const img = document.createElement('img');
-        img.src = src; img.alt = ''; img.loading = 'lazy';
-        box.insertBefore(img, box.firstChild);
-        const emoji = [...box.childNodes].find(n => n.nodeType === 3);
-        if (emoji) emoji.textContent = '';
-      }
-    });
-
-    /* ---- Menu hamburger ---- */
+    /* Menu hamburger */
     const burger = document.getElementById('hamburger');
     const menu = document.getElementById('menu');
     const toggleMenu = (open) => {
@@ -1472,14 +1192,16 @@
     burger.addEventListener('click', () => toggleMenu(!menu.classList.contains('open')));
     menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggleMenu(false)));
 
-    /* ---- Sombra no header ao rolar ---- */
+    /* Sombra no header ao rolar */
     const header = document.getElementById('topo');
-    window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 10), { passive: true });
+    window.addEventListener('scroll', () => header.classList.toggle('scrolled', scrollY > 10), { passive: true });
 
-    /* ---- Animação de entrada ao rolar ---- */
+    /* Animação de entrada ao rolar */
     const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
-    }, { threshold: 0.12 });
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: .12 });
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
   </script>
 </body>
